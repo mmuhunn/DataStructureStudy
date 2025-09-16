@@ -23,6 +23,7 @@ public class q11659 {
             if(a==1) System.out.println(sums[b-1]);
             else System.out.println(sums[b-1]-sums[a-2]);
         }
+        sc.close();
 
     }
 
