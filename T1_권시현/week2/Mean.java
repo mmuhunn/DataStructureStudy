@@ -7,15 +7,19 @@ public class Mean {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.nextLine();
+
+
+        double sum = 0;
         int max = 0;
-        for (int i = 0; i < n; i++) {
-            int k = sc.nextInt();
-            if (k > max) {
-                max = k;
+        for (int i = 1; i <= n; i++){
+            int num = sc.nextInt();
+            if (max < num){
+                max = num;
             }
+            sum += num;
         }
-        double mean = (double) total / n;
-        System.out.println(mean);
+        double total = sum/max*100;
+        System.out.println(total / n);
 
     }
 }
