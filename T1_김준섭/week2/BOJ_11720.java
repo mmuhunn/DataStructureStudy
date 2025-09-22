@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.Scanner;
 
 public class BOJ_11720 {
@@ -17,8 +16,4 @@ public class BOJ_11720 {
         System.out.println(sum);
     }
 
-=======
-public class BOJ_11720 {
-
->>>>>>> cc6c96ee5c179a58ec81946fb9a982afedd8f656
 }
