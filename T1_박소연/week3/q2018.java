@@ -8,30 +8,34 @@ package T1_박소연.week3;
 N을 입력받아 가지수를 출력하는 프로그램을 작성하시오.
 * */
 import java.util.Scanner;
+
+//투포인터로 풀면 시간복잡도가 N.
+// N이 1000만으로, 다른 알고리즘으로 풀면 1억(1초)가 넘어감.
 public class q2018 {
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        //4472*4473/2 >10000000
-        int[] sums = new int[4480];
-        for (int i=1;i<4475;i++) {
-            if(i>1)sums[i]= i+sums[i-1];
-            else sums[i]=i;
-        }
-        int count =0;
-        for(int j=0;j<=((N+1)/2);j++){
-            for(int k=0;k<j;k++){
-                if(k==0){
-                    if(N==sums[j]){
-                        count++;
-                    }
-                }else{
-                    if(N==(sums[j]-sums[k])){
-                        count++;
-                    }
-                }
+        int count =1; //합이 자기 자신 한 번인 경우
+        int start_i = 1;
+        int sum =1;
+        int end_i =1;
+
+        while(end_i<N){
+            if(sum==N){
+                count++;
+                end_i++;
+                sum+=end_i;
+            }else if(sum>N){
+                sum-=start_i;
+                start_i++;
+            }else{
+                end_i++;
+                sum+=end_i;
             }
+
         }
-        System.out.println(count+1);
+        System.out.println(count);
+
+
     }
 }
