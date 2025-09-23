@@ -7,24 +7,24 @@ import java.util.Scanner;
 public class B1940 {
         public int solution(int n, int m, int[] ints) {
             ArrayList<Integer> arrayList = new ArrayList<>();
-            for (int i = 0; i < ints.length; i++) {
+            for (int i = 0; i < n; i++) {
                 arrayList.add(ints[i]);
             }
             Collections.sort(arrayList);
             int pointer1 = 0;
-            int pointer2 = ints.length;
+            int pointer2 = n-1;
             int sum = 0;
             int count = 0;
             while (pointer1 < pointer2){
-                sum = pointer1 + pointer2;
+                sum = arrayList.get(pointer1) + arrayList.get(pointer2);
                 if (sum == m){
                     count++;
                     pointer1++;
                     pointer2--;
                 }else if(sum < m){
-                    pointer1--;
+                    pointer1++;
                 }else{
-                    pointer2++;
+                    pointer2--;
                 }
             }
             return count;
