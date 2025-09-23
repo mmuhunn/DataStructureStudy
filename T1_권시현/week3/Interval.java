@@ -13,10 +13,10 @@ public class Interval {
             int num = sc.nextInt();
             list.add(num);
         }
-        long[] pre = new long[n + 1];
+        long[] pre = new long[n + 1];     //new가 새로운 객체를 만드는 명령어
         pre[0] = n;
         for (int i = 1; i <= n; i++) {
-            pre[i] = pre[i-1] + list.get(i-1);   //이거 ㅈ도 모르겠긔
+            pre[i] = pre[i-1] + list.get(i-1);   //시간복잡도 줄이게 처음부터 누적합 배열을 만든거임.
         }
         for (int j = 1; j <= m; j++) {
             int first = sc.nextInt();
