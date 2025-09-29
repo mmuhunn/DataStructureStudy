@@ -1,6 +1,5 @@
 package T1_박소연.week5;
-import java.util.Stack;
-import java.util.Scanner;
+
 
 /*
 스택 (stack)은 기본적인 자료구조 중 하나로, 컴퓨터 프로그램을 작성할 때 자주 이용되는 개념이다.
@@ -17,37 +16,9 @@ import java.util.Scanner;
 입력된 수열을 만들기 위해 필요한 연산을 한 줄에 한 개씩 출력한다.
 push연산은 +로, pop 연산은 -로 표현하도록 한다. 불가능한 경우 NO를 출력한다.
 
-예제 입력
-8
-4
-3
-6
-8
-7
-5
-2
-1
-
-예제 출력
-+
-+
-+
-+
--
--
-+
-+
--
-+
-+
--
--
--
--
--
-
  */
-
+import java.util.Stack;
+import java.util.Scanner;
 public class q1874 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
