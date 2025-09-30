@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .idea/
 *.iml
 .vscode/
 =======
 .idea/
 >>>>>>> 5359221c22544ccab3ca7bf0a3347214b3a333a1
+=======
+.idea/
+.vscode/
+out/
+>>>>>>> cdace135676c33bca103d33c165f1018fb91e695
